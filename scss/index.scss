@@ -1,0 +1,17 @@
+@use "./variables" as vars;
+@use "./mixins" as mixins;
+
+body {
+  font-family: vars.$primary-font;
+}
+
+/* Navigation Bar */
+
+.navigation-bar {
+  border: solid red;
+  background-color: red;
+}
+
+@include mixins.media-query(vars.$mobile-min-width) {
+  @include mixins.flex-center-column;
+}

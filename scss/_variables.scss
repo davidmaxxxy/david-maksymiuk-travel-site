@@ -1,0 +1,55 @@
+//FONTS
+$primary-font: Verdana, sans-serif;
+
+//COLORS
+$orange-color: #db7a4e;
+$light-orange: #fefaf5;
+$blue-color: #335576;
+$white-color: #ffffff;
+
+//MEDIA QUERIES
+$mobile-min-width: 320px;
+$tablet-min-width: 481px;
+$desktop-min-width: 1025px;
+
+// ----------------------------------//
+// MOBILE
+// ----------------------------------//
+
+//Margins
+$small-margin-mobile: 8px;
+$medium-margin-mobile: 16px;
+$large-margin-mobile: 24px;
+
+//Paddings
+$small-padding-mobile: 8px;
+$medium-padding-mobile: 16px;
+$large-padding-mobile: 24px;
+
+// ----------------------------------//
+// TABLET
+// ----------------------------------//
+
+//Margins
+$small-margin-tablet: 12px;
+$medium-margin-tablet: 24px;
+$large-margin-tablet: 32px;
+
+//Paddings
+$small-padding-tablet: 12px;
+$medium-padding-tablet: 20px;
+$large-padding-tablet: 32px;
+
+// ----------------------------------//
+// DESKTOP
+// ----------------------------------//
+
+//Margins
+$small-margin-desktop: 24px;
+$medium-margin-desktop: 32px;
+$large-margin-desktop: 40px;
+
+//Paddings
+$small-padding-desktop: 24px;
+$medium-padding-desktop: 32px;
+$large-padding-desktop: 40px;

@@ -1,0 +1,15 @@
+body {
+  font-family: Verdana, sans-serif;
+}
+
+/* Navigation Bar */
+@media (min-width: 320px) {
+  .navigation-bar {
+    border: solid red;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=index.css.map */

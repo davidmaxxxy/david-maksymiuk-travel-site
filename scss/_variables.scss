@@ -8,13 +8,16 @@ $blue-color: #335576;
 $white-color: #ffffff;
 
 //MEDIA QUERIES
-$mobile-min-width: 320px;
+$mobile-max-width: 480px;
 $tablet-min-width: 481px;
 $desktop-min-width: 1025px;
 
 // ----------------------------------//
 // MOBILE
 // ----------------------------------//
+//Diameters
+$mobile-container-height: 100vh;
+$mobile-container-width: 100%;
 
 //Margins
 $small-margin-mobile: 8px;

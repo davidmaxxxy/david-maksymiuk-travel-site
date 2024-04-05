@@ -2,7 +2,7 @@
 
 //MEDIA QUERIES
 @mixin media-query($breakpoint) {
-  @media (min-width: $breakpoint) {
+  @media (max-width: $breakpoint) {
     @content;
   }
 }
@@ -12,6 +12,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex-center-cards() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 

@@ -8,7 +8,7 @@ body {
   overflow-x: hidden;
 }
 /* Navigation Bar */
-@include mixins.media-query(vars.$mobile-max-width) {
+@include mixins.media-query-max(vars.$mobile-max-width) {
   .navigation-bar {
     @include mixins.flex-center-column;
     height: 200px;
@@ -18,23 +18,40 @@ body {
 
     &__list-container {
       height: 100px;
-      width: 200px;
+      width: 100%;
       border: solid green;
+      @include mixins.flex-center-column;
     }
+
+    &__link--active {
+      border-bottom: solid vars.$orange-color;
+    }
+
+    &__logo {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
     &__logo-container {
       height: 100px;
-      width: 200px;
+      width: 100%;
       border: solid green;
-      list-style-type: none;
+      // list-style-type: none;
       @include mixins.flex-center-column;
     }
     &__nav-links {
-      @include mixins.flex-center-column;
+      width: 100%;
+      @include mixins.flex-center-row;
+      list-style-type: none;
+      justify-content: space-around;
+      // border: solid red;
       padding: 0;
     }
     li {
       padding: 0;
-      list-style-type: none;
+      // list-style-type: none;
+
+      // border: solid red;
       @include mixins.flex-center-column;
     }
     a {
@@ -44,7 +61,7 @@ body {
   }
 
   .hero {
-    height: vars.$mobile-container-height;
+    height: 80vh;
     width: 100vw;
     @include mixins.flex-center-column;
     border: solid green;
@@ -92,7 +109,7 @@ body {
 
     &__container {
       width: 100%;
-      height: 20vh;
+      height: 10vh;
       @include mixins.flex-center-column;
       background-color: red;
     }
@@ -130,6 +147,251 @@ body {
     a {
       text-decoration: none;
       color: vars.$white-color;
+    }
+  }
+
+  .footer {
+    @include mixins.flex-center-row;
+    height: 60vh;
+    width: 100vw;
+    background-color: aqua;
+
+    &__container {
+      @include mixins.flex-center-column;
+      width: 100%;
+    }
+
+    &__contact {
+      @include mixins.flex-center-column;
+    }
+
+    &__hours {
+      @include mixins.flex-center-column;
+    }
+
+    &__social {
+      @include mixins.flex-center-column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    &__title-header {
+      color: vars.$orange-color;
+    }
+
+    &__social-container {
+      width: 100vw;
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+      img {
+        height: 40px;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@include mixins.media-query-min(vars.$tablet-min-width) {
+  .navigation-bar {
+    @include mixins.flex-center-row;
+    height: 200px;
+    width: 100vw;
+    // border: solid green;
+    // background-color: red;
+
+    &__logo-container {
+      height: 100px;
+      width: 100%;
+      border: solid green;
+      // list-style-type: none;
+      @include mixins.flex-start;
+      margin-left: 50px;
+    }
+
+    &__logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    &__list-container {
+      font-size: 20px;
+      height: 100px;
+      width: 100%;
+      border: solid green;
+      @include mixins.flex-end;
+      margin-right: 50px;
+    }
+
+    &__nav-links {
+      width: 50%;
+      @include mixins.flex-center-row;
+      list-style-type: none;
+      justify-content: space-around;
+      border: solid red;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      // list-style-type: none;
+
+      // border: solid red;
+      @include mixins.flex-center-column;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$blue-color;
+    }
+
+    &__link--active {
+      border-bottom: solid vars.$orange-color;
+    }
+  }
+
+  .hero {
+    height: 50vh;
+    width: 100vw;
+    @include mixins.flex-center-row;
+    border: solid green;
+    // margin-top: 20px;
+
+    &__slogan-container {
+      height: 100%;
+      width: 50%;
+      @include mixins.flex-center-column;
+      align-items: start;
+      margin-left: 50px;
+      background-color: yellow;
+    }
+
+    &__slogan {
+      font-size: 32px;
+      margin-right: 200px;
+      text-align: start;
+    }
+    p {
+      margin-right: 200px;
+      text-align: start;
+    }
+    &__btn {
+      height: 50px;
+      width: 180px;
+      background-color: vars.$orange-color;
+      @include mixins.flex-center-column;
+      border-radius: 20px;
+      text-decoration: none;
+      color: vars.$white-color;
+      cursor: pointer;
+    }
+
+    &__image-container {
+      height: 100%;
+      background-color: pink;
+      width: 50%;
+      margin-right: 50px;
+      @include mixins.flex-center-column;
+    }
+    &__hero-image {
+      height: 400px;
+      width: 400px;
+    }
+  }
+
+  .recommendations {
+    // height: vars.$mobile-container-height;
+    width: 100vw;
+    @include mixins.flex-center-column;
+    border: solid green;
+    // background-color: aqua;
+
+    &__container {
+      width: 100%;
+      height: 10vh;
+      @include mixins.flex-start;
+      background-color: red;
+
+      h2 {
+        margin-left: 50px;
+      }
+    }
+    &__cards {
+      height: 50vh;
+      width: 80%;
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+      // background-color: aqua;
+    }
+    &__card {
+      height: 400px;
+      width: 300px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      @include mixins.flex-end;
+
+      .destination-name {
+        display: flex;
+        flex-direction: start;
+      }
+    }
+    &__card--iceland {
+      background-image: url(../Assets/Images/iceland.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &__card--greece {
+      background-image: url(../Assets/Images/greece.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &__card--hawaii {
+      background-image: url(../Assets/Images/hawaii.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$white-color;
+    }
+  }
+
+  .footer {
+    @include mixins.flex-center-row;
+    height: 60vh;
+    width: 100vw;
+    background-color: aqua;
+
+    &__container {
+      @include mixins.flex-center-column;
+      width: 100%;
+    }
+
+    &__contact {
+      @include mixins.flex-center-column;
+    }
+
+    &__hours {
+      @include mixins.flex-center-column;
+    }
+
+    &__social {
+      @include mixins.flex-center-column;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    &__title-header {
+      color: vars.$orange-color;
+    }
+
+    &__social-container {
+      width: 100vw;
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+      img {
+        height: 40px;
+        margin-top: 1rem;
+      }
     }
   }
 }

@@ -17,29 +17,41 @@ body {
   }
   .navigation-bar__list-container {
     height: 100px;
-    width: 200px;
+    width: 100%;
     border: solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar__link--active {
+    border-bottom: solid #db7a4e;
+  }
+  .navigation-bar__logo {
+    font-size: 32px;
+    font-weight: 700;
   }
   .navigation-bar__logo-container {
     height: 100px;
-    width: 200px;
+    width: 100%;
     border: solid green;
-    list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
   .navigation-bar__nav-links {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
     padding: 0;
   }
   .navigation-bar li {
     padding: 0;
-    list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +62,7 @@ body {
     color: #335576;
   }
   .hero {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -106,7 +118,7 @@ body {
   }
   .recommendations__container {
     width: 100%;
-    height: 20vh;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,8 +141,8 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     display: flex;
-    align-items: end;
-    justify-content: center;
+    align-items: center;
+    justify-content: end;
     flex-direction: row;
   }
   .recommendations__card--iceland {
@@ -151,5 +163,287 @@ body {
   .recommendations a {
     text-decoration: none;
     color: #ffffff;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 60vh;
+    width: 100vw;
+    background-color: aqua;
+  }
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer__hours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .footer__title-header {
+    color: #db7a4e;
+  }
+  .footer__social-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__social-container img {
+    height: 40px;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 481px) {
+  .navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 200px;
+    width: 100vw;
+  }
+  .navigation-bar__logo-container {
+    height: 100px;
+    width: 100%;
+    border: solid green;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    margin-left: 50px;
+  }
+  .navigation-bar__logo {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .navigation-bar__list-container {
+    font-size: 20px;
+    height: 100px;
+    width: 100%;
+    border: solid green;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    margin-right: 50px;
+  }
+  .navigation-bar__nav-links {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    border: solid red;
+    padding: 0;
+  }
+  .navigation-bar li {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar a {
+    text-decoration: none;
+    color: #335576;
+  }
+  .navigation-bar__link--active {
+    border-bottom: solid #db7a4e;
+  }
+  .hero {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: solid green;
+  }
+  .hero__slogan-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 50px;
+    background-color: yellow;
+  }
+  .hero__slogan {
+    font-size: 32px;
+    margin-right: 200px;
+    text-align: start;
+  }
+  .hero p {
+    margin-right: 200px;
+    text-align: start;
+  }
+  .hero__btn {
+    height: 50px;
+    width: 180px;
+    background-color: #db7a4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .hero__image-container {
+    height: 100%;
+    background-color: pink;
+    width: 50%;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .hero__hero-image {
+    height: 400px;
+    width: 400px;
+  }
+  .recommendations {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid green;
+  }
+  .recommendations__container {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    background-color: red;
+  }
+  .recommendations__container h2 {
+    margin-left: 50px;
+  }
+  .recommendations__cards {
+    height: 50vh;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .recommendations__card {
+    height: 400px;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+  }
+  .recommendations__card .destination-name {
+    display: flex;
+    flex-direction: start;
+  }
+  .recommendations__card--iceland {
+    background-image: url(../Assets/Images/iceland.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .recommendations__card--greece {
+    background-image: url(../Assets/Images/greece.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .recommendations__card--hawaii {
+    background-image: url(../Assets/Images/hawaii.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .recommendations a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 60vh;
+    width: 100vw;
+    background-color: aqua;
+  }
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer__hours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .footer__title-header {
+    color: #db7a4e;
+  }
+  .footer__social-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__social-container img {
+    height: 40px;
+    margin-top: 1rem;
   }
 }/*# sourceMappingURL=index.css.map */

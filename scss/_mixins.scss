@@ -1,8 +1,14 @@
 @use "./variables" as vars;
 
 //MEDIA QUERIES
-@mixin media-query($breakpoint) {
+@mixin media-query-max($breakpoint) {
   @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-query-min($breakpoint) {
+  @media (min-width: $breakpoint) {
     @content;
   }
 }
@@ -31,15 +37,15 @@
 
 @mixin flex-start() {
   display: flex;
-  align-items: start;
-  justify-content: center;
+  align-items: center;
+  justify-content: start;
   flex-direction: row;
 }
 
 @mixin flex-end() {
   display: flex;
-  align-items: end;
-  justify-content: center;
+  align-items: center;
+  justify-content: end;
   flex-direction: row;
 }
 

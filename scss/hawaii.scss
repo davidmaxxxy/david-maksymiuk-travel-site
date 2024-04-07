@@ -1,0 +1,419 @@
+@use "./variables" as vars;
+@use "./mixins" as mixins;
+
+body {
+  font-family: vars.$primary-font;
+  color: vars.$blue-color;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* Navigation Bar */
+@include mixins.media-query-max(vars.$mobile-max-width) {
+  .navigation-bar {
+    @include mixins.flex-center-column;
+    height: 200px;
+    width: 100vw;
+    // border: solid green;
+    // background-color: red;
+
+    &__list-container {
+      height: 100px;
+      width: 100%;
+      // border: solid green;
+      @include mixins.flex-center-column;
+    }
+
+    &__link--active {
+      border-bottom: solid vars.$orange-color;
+    }
+
+    &__logo {
+      font-size: 32px;
+      font-weight: 700;
+      padding: 0;
+    }
+
+    &__logo-container {
+      height: 100px;
+      width: 100%;
+
+      // list-style-type: none;
+      @include mixins.flex-center-column;
+    }
+    &__nav-links {
+      width: 100%;
+      @include mixins.flex-center-row;
+      list-style-type: none;
+      justify-content: space-around;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      @include mixins.flex-center-column;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$blue-color;
+    }
+  }
+
+  .recommendations {
+    // height: vars.$mobile-container-height;
+    width: 100vw;
+    @include mixins.flex-center-column;
+
+    // background-color: aqua;
+
+    &__container {
+      width: 100%;
+      height: 10vh;
+      @include mixins.flex-center-column;
+      // background-color: red;
+    }
+    &__cards {
+      height: auto;
+      width: 100%;
+      @include mixins.flex-center-cards;
+      // justify-content: space-around;
+      // background-color: aqua;
+    }
+    &__card {
+      height: 400px;
+      width: 300px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      @include mixins.flex-end;
+      align-items: end;
+    }
+    &__card--iceland {
+      background-image: url(../Assets/Images/iceland.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &__card--greece {
+      background-image: url(../Assets/Images/greece.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &__card--hawaii {
+      background-image: url(../Assets/Images/hawaii.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$white-color;
+    }
+  }
+
+  .footer {
+    @include mixins.flex-center-row;
+    height: 50vh;
+    width: 100vw;
+    background-color: vars.$light-orange;
+
+    &__container {
+      @include mixins.flex-center-column;
+      height: 100%;
+      width: 100%;
+      // background-color: yellow;
+    }
+
+    &__contact-container {
+      @include mixins.flex-center-column;
+      height: 33%;
+      width: 100%;
+    }
+
+    &__hours-container {
+      @include mixins.flex-center-column;
+      height: 33%;
+      width: 100%;
+
+      // @include mixins.flex-center-row;
+    }
+
+    &__opening-hours-container {
+      // border: solid red;
+      width: 100%;
+      @include mixins.flex-center-column;
+    }
+
+    .footer__info-box {
+      height: 80px;
+      width: 200px;
+      margin: 0;
+      // border: solid red;
+      @include mixins.flex-center-column;
+    }
+
+    &__social-container {
+      @include mixins.flex-center-column;
+      width: 100%;
+      height: 33%;
+      // margin-top: 1rem;
+      // border: solid green;
+    }
+
+    &__title-header {
+      color: vars.$orange-color;
+    }
+
+    &__img-container {
+      height: 90px;
+      width: 50%;
+      // border: solid red;
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+
+      img {
+        height: 40px;
+      }
+    }
+  }
+}
+
+@include mixins.media-query-min(vars.$tablet-min-width) {
+  .navigation-bar {
+    @include mixins.flex-center-row;
+    height: 100px;
+    width: 100%;
+    // border: solid green;
+    // background-color: red;
+
+    &__logo-container {
+      height: 100px;
+      width: 100%;
+      // border: solid green;
+      // list-style-type: none;
+      @include mixins.flex-start;
+      // margin-left: 50px;
+    }
+
+    &__logo {
+      font-size: 30px;
+      font-weight: 700;
+      margin-left: 100px;
+    }
+
+    &__list-container {
+      font-size: 20px;
+      height: 100px;
+      width: 100%;
+      // border: solid green;
+      @include mixins.flex-center-column;
+      // margin-right: 50px;
+    }
+
+    &__nav-links {
+      width: 80%;
+      @include mixins.flex-center-row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      list-style-type: none;
+      // border: solid red;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      // border: solid red;
+      @include mixins.flex-center-column;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$blue-color;
+      padding-left: 0px;
+      margin-right: vars.$large-margin-desktop;
+      // padding-right: 80px;
+    }
+
+    &__link--active {
+      border-bottom: solid vars.$orange-color;
+    }
+  }
+
+  .hero {
+    height: 80vh;
+    width: 100vw;
+    @include mixins.flex-center-row;
+    // border: solid green;
+    // margin-top: 20px;
+    background-color: vars.$light-orange;
+
+    &__slogan-container {
+      height: 100%;
+      width: 50%;
+      @include mixins.flex-center-column;
+      align-items: start;
+      margin-left: 100px;
+      // background-color: yellow;
+    }
+
+    &__slogan {
+      font-size: 32px;
+      margin-right: 200px;
+      text-align: start;
+    }
+    p {
+      margin-right: 200px;
+      text-align: start;
+    }
+    &__btn {
+      height: 50px;
+      width: 180px;
+      background-color: vars.$orange-color;
+      @include mixins.flex-center-column;
+      border-radius: 20px;
+      text-decoration: none;
+      color: vars.$white-color;
+      cursor: pointer;
+    }
+
+    &__image-container {
+      height: 100%;
+      // background-color: pink;
+      width: 50%;
+      // margin-right: 50px;
+      @include mixins.flex-center-column;
+    }
+    &__hero-image {
+      height: 400px;
+      width: 400px;
+    }
+  }
+
+  .recommendations {
+    height: 100vh;
+    width: 100vw;
+    @include mixins.flex-center-column;
+    // border: solid green;
+    // background-color: aqua;
+
+    &__container {
+      width: 100%;
+      height: 10vh;
+      @include mixins.flex-start;
+      // background-color: red;
+      margin-left: 200px;
+    }
+    &__cards {
+      height: 90vh;
+      width: 80%;
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+      // background-color: aqua;
+    }
+    &__card {
+      height: 500px;
+      width: 350px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      padding-right: 10px;
+
+      .destination-name {
+        display: flex;
+        flex-direction: start;
+      }
+    }
+    &__card--iceland {
+      background-image: url(../Assets/Images/iceland.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &__card--greece {
+      background-image: url(../Assets/Images/greece.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &__card--hawaii {
+      background-image: url(../Assets/Images/hawaii.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$white-color;
+    }
+  }
+
+  .footer {
+    @include mixins.flex-center-row;
+    height: 40vh;
+    width: 100vw;
+    background-color: vars.$light-orange;
+
+    &__container {
+      @include mixins.flex-center-row;
+      height: 100%;
+      width: 80%;
+      // background-color: yellow;
+      // border: solid green;
+    }
+
+    &__contact-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      height: 30%;
+      width: 25%;
+      // margin-left: 200px;
+      // border: solid green;
+    }
+    &__hours-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      height: 30%;
+      width: 50%;
+      // margin-left: 50px;
+      // border: solid green;
+      // @include mixins.flex-center-row;
+    }
+
+    &__opening-hours-container {
+      // border: solid red;
+      flex-wrap: wrap;
+      width: 100%;
+      @include mixins.flex-start;
+    }
+
+    .footer__info-box {
+      width: 200px;
+      // border: solid red;
+    }
+
+    &__social-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      width: 25%;
+      height: 30%;
+      // margin-top: 1rem;
+      // border: solid green;
+    }
+
+    &__title-header {
+      color: vars.$orange-color;
+    }
+
+    &__img-container {
+      height: 90px;
+      width: 100%;
+      margin-top: 25px;
+      @include mixins.flex-center-row;
+      justify-content: start;
+    }
+    &__small-img {
+      padding-right: 20px;
+      height: 35px;
+      // width: 30px;
+    }
+  }
+}

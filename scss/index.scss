@@ -19,7 +19,7 @@ body {
     &__list-container {
       height: 100px;
       width: 100%;
-      border: solid green;
+      // border: solid green;
       @include mixins.flex-center-column;
     }
 
@@ -30,12 +30,13 @@ body {
     &__logo {
       font-size: 32px;
       font-weight: 700;
+      padding: 0;
     }
 
     &__logo-container {
       height: 100px;
       width: 100%;
-      border: solid green;
+
       // list-style-type: none;
       @include mixins.flex-center-column;
     }
@@ -44,14 +45,10 @@ body {
       @include mixins.flex-center-row;
       list-style-type: none;
       justify-content: space-around;
-      // border: solid red;
       padding: 0;
     }
     li {
       padding: 0;
-      // list-style-type: none;
-
-      // border: solid red;
       @include mixins.flex-center-column;
     }
     a {
@@ -61,21 +58,23 @@ body {
   }
 
   .hero {
-    height: 80vh;
+    height: 50vh;
     width: 100vw;
     @include mixins.flex-center-column;
-    border: solid green;
+    background-color: vars.$light-orange;
+
     // margin-top: 20px;
 
     &__slogan-container {
       height: 50%;
       @include mixins.flex-center-column;
-      background-color: yellow;
+      // background-color: yellow;
     }
 
     &__slogan,
     p {
       text-align: center;
+      padding: 0 32px;
     }
     &__btn {
       height: 50px;
@@ -89,14 +88,14 @@ body {
     }
 
     &__image-container {
-      height: 50%;
+      height: 20%;
       @include mixins.flex-center-column;
-      background-color: pink;
+      // background-color: pink;
       width: 100vw;
     }
     &__hero-image {
       height: 200px;
-      width: 200px;
+      width: auto;
     }
   }
 
@@ -104,14 +103,14 @@ body {
     // height: vars.$mobile-container-height;
     width: 100vw;
     @include mixins.flex-center-column;
-    border: solid green;
+
     // background-color: aqua;
 
     &__container {
       width: 100%;
       height: 10vh;
       @include mixins.flex-center-column;
-      background-color: red;
+      // background-color: red;
     }
     &__cards {
       height: auto;
@@ -128,6 +127,7 @@ body {
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
       @include mixins.flex-end;
+      align-items: end;
     }
     &__card--iceland {
       background-image: url(../Assets/Images/iceland.jpg);
@@ -152,40 +152,66 @@ body {
 
   .footer {
     @include mixins.flex-center-row;
-    height: 60vh;
+    height: 50vh;
     width: 100vw;
-    background-color: aqua;
+    background-color: vars.$light-orange;
 
     &__container {
       @include mixins.flex-center-column;
+      height: 100%;
+      width: 100%;
+      // background-color: yellow;
+    }
+
+    &__contact-container {
+      @include mixins.flex-center-column;
+      height: 33%;
       width: 100%;
     }
 
-    &__contact {
+    &__hours-container {
+      @include mixins.flex-center-column;
+      height: 33%;
+      width: 100%;
+
+      // @include mixins.flex-center-row;
+    }
+
+    &__opening-hours-container {
+      // border: solid red;
+      width: 100%;
       @include mixins.flex-center-column;
     }
 
-    &__hours {
+    .footer__info-box {
+      height: 80px;
+      width: 200px;
+      margin: 0;
+      // border: solid red;
       @include mixins.flex-center-column;
     }
 
-    &__social {
+    &__social-container {
       @include mixins.flex-center-column;
       width: 100%;
-      margin-top: 1rem;
+      height: 33%;
+      // margin-top: 1rem;
+      // border: solid green;
     }
 
     &__title-header {
       color: vars.$orange-color;
     }
 
-    &__social-container {
-      width: 100vw;
+    &__img-container {
+      height: 90px;
+      width: 50%;
+      // border: solid red;
       @include mixins.flex-center-row;
       justify-content: space-around;
+
       img {
         height: 40px;
-        margin-top: 1rem;
       }
     }
   }
@@ -194,52 +220,55 @@ body {
 @include mixins.media-query-min(vars.$tablet-min-width) {
   .navigation-bar {
     @include mixins.flex-center-row;
-    height: 200px;
-    width: 100vw;
+    height: 100px;
+    width: 100%;
     // border: solid green;
     // background-color: red;
 
     &__logo-container {
       height: 100px;
       width: 100%;
-      border: solid green;
+      // border: solid green;
       // list-style-type: none;
       @include mixins.flex-start;
-      margin-left: 50px;
+      // margin-left: 50px;
     }
 
     &__logo {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 700;
+      margin-left: 100px;
     }
 
     &__list-container {
       font-size: 20px;
       height: 100px;
       width: 100%;
-      border: solid green;
-      @include mixins.flex-end;
-      margin-right: 50px;
+      // border: solid green;
+      @include mixins.flex-center-column;
+      // margin-right: 50px;
     }
 
     &__nav-links {
-      width: 50%;
+      width: 80%;
       @include mixins.flex-center-row;
-      list-style-type: none;
+      flex-wrap: wrap;
       justify-content: space-around;
-      border: solid red;
+      list-style-type: none;
+      // border: solid red;
       padding: 0;
     }
     li {
       padding: 0;
-      // list-style-type: none;
-
       // border: solid red;
       @include mixins.flex-center-column;
     }
     a {
       text-decoration: none;
       color: vars.$blue-color;
+      padding-left: 0px;
+      margin-right: vars.$large-margin-desktop;
+      // padding-right: 80px;
     }
 
     &__link--active {
@@ -248,19 +277,20 @@ body {
   }
 
   .hero {
-    height: 50vh;
+    height: 80vh;
     width: 100vw;
     @include mixins.flex-center-row;
-    border: solid green;
+    // border: solid green;
     // margin-top: 20px;
+    background-color: vars.$light-orange;
 
     &__slogan-container {
       height: 100%;
       width: 50%;
       @include mixins.flex-center-column;
       align-items: start;
-      margin-left: 50px;
-      background-color: yellow;
+      margin-left: 100px;
+      // background-color: yellow;
     }
 
     &__slogan {
@@ -285,9 +315,9 @@ body {
 
     &__image-container {
       height: 100%;
-      background-color: pink;
+      // background-color: pink;
       width: 50%;
-      margin-right: 50px;
+      // margin-right: 50px;
       @include mixins.flex-center-column;
     }
     &__hero-image {
@@ -297,37 +327,37 @@ body {
   }
 
   .recommendations {
-    // height: vars.$mobile-container-height;
+    height: 100vh;
     width: 100vw;
     @include mixins.flex-center-column;
-    border: solid green;
+    // border: solid green;
     // background-color: aqua;
 
     &__container {
       width: 100%;
       height: 10vh;
       @include mixins.flex-start;
-      background-color: red;
-
-      h2 {
-        margin-left: 50px;
-      }
+      // background-color: red;
+      margin-left: 200px;
     }
     &__cards {
-      height: 50vh;
+      height: 90vh;
       width: 80%;
       @include mixins.flex-center-row;
       justify-content: space-around;
       // background-color: aqua;
     }
     &__card {
-      height: 400px;
-      width: 300px;
+      height: 500px;
+      width: 350px;
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
-      @include mixins.flex-end;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      padding-right: 10px;
 
       .destination-name {
         display: flex;
@@ -357,41 +387,75 @@ body {
 
   .footer {
     @include mixins.flex-center-row;
-    height: 60vh;
+    height: 40vh;
     width: 100vw;
-    background-color: aqua;
+    background-color: vars.$light-orange;
 
     &__container {
+      @include mixins.flex-center-row;
+      height: 100%;
+      width: 80%;
+      // background-color: yellow;
+      // border: solid green;
+    }
+
+    &__contact-container {
       @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      height: 30%;
+      width: 25%;
+      // margin-left: 200px;
+      // border: solid green;
+    }
+    &__hours-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      height: 30%;
+      width: 50%;
+      // margin-left: 50px;
+      // border: solid green;
+      // @include mixins.flex-center-row;
+    }
+
+    &__opening-hours-container {
+      // border: solid red;
+      flex-wrap: wrap;
       width: 100%;
+      @include mixins.flex-start;
     }
 
-    &__contact {
-      @include mixins.flex-center-column;
+    .footer__info-box {
+      width: 200px;
+      // border: solid red;
     }
 
-    &__hours {
+    &__social-container {
       @include mixins.flex-center-column;
-    }
-
-    &__social {
-      @include mixins.flex-center-column;
-      width: 100%;
-      margin-top: 1rem;
+      align-items: start;
+      justify-content: start;
+      width: 25%;
+      height: 30%;
+      // margin-top: 1rem;
+      // border: solid green;
     }
 
     &__title-header {
       color: vars.$orange-color;
     }
 
-    &__social-container {
-      width: 100vw;
+    &__img-container {
+      height: 90px;
+      width: 100%;
+      margin-top: 25px;
       @include mixins.flex-center-row;
-      justify-content: space-around;
-      img {
-        height: 40px;
-        margin-top: 1rem;
-      }
+      justify-content: start;
+    }
+    &__small-img {
+      padding-right: 20px;
+      height: 35px;
+      // width: 30px;
     }
   }
 }

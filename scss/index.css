@@ -6,7 +6,7 @@ body {
 }
 
 /* Navigation Bar */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .navigation-bar {
     display: flex;
     align-items: center;
@@ -234,7 +234,7 @@ body {
     height: 40px;
   }
 }
-@media (min-width: 601px) {
+@media (min-width: 768px) {
   .navigation-bar {
     display: flex;
     align-items: center;

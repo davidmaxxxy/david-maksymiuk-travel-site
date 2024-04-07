@@ -1,1 +1,433 @@
-/*# sourceMappingURL=greece.css.map */
+body {
+  font-family: Verdana, sans-serif;
+  color: #335576;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+@media (max-width: 767px) {
+  .navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    width: 100vw;
+  }
+  .navigation-bar__list-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar__link--active {
+    border-bottom: solid #db7a4e;
+  }
+  .navigation-bar__logo {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0;
+  }
+  .navigation-bar__logo-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar__nav-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .navigation-bar li {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar a {
+    text-decoration: none;
+    color: #335576;
+  }
+  .schedule {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../Assets/Images/greece.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .schedule__title-container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .schedule__title {
+    font-size: 50px;
+    color: #ffffff;
+  }
+  .schedule__container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .schedule__cards {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .schedule__card {
+    height: 500px;
+    width: 320px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .schedule__card-name {
+    height: 40px;
+    width: 90%;
+    text-align: center;
+    border-bottom: solid black;
+    color: black;
+  }
+  .schedule a {
+    text-decoration: none;
+  }
+  .schedule__card-schedule-container {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .schedule__card-schedule {
+    height: 80% px;
+    width: 100%;
+    background-color: #fefaf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .schedule__card-schedule h1 {
+    color: black;
+    font-weight: 300;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    background-color: #fefaf5;
+  }
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .footer__contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 33%;
+    width: 100%;
+  }
+  .footer__hours-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 33%;
+    width: 100%;
+  }
+  .footer__opening-hours-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer .footer__info-box {
+    height: 80px;
+    width: 200px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer__social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 33%;
+  }
+  .footer__title-header {
+    color: #db7a4e;
+  }
+  .footer__img-container {
+    height: 90px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__img-container img {
+    height: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .navigation-bar__logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+  }
+  .navigation-bar__logo {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .navigation-bar__list-container {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar__nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+  }
+  .navigation-bar li {
+    width: 100%;
+    height: 20%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .navigation-bar a {
+    text-decoration: none;
+    color: #335576;
+    padding-left: 0px;
+    margin-right: 60px;
+  }
+  .navigation-bar__link--active {
+    border-bottom: solid #db7a4e;
+  }
+  .schedule {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../Assets/Images/greece.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .schedule__title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    align-items: end;
+  }
+  .schedule__title {
+    font-size: 60px;
+    padding-left: 15%;
+    color: #ffffff;
+  }
+  .schedule__container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .schedule__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .schedule__card {
+    height: 500px;
+    width: 320px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .schedule__card-name {
+    height: 40px;
+    width: 90%;
+    text-align: center;
+    border-bottom: solid black;
+    color: black;
+  }
+  .schedule a {
+    text-decoration: none;
+  }
+  .schedule__card-schedule-container {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .schedule__card-schedule {
+    height: 80% px;
+    width: 100%;
+    background-color: #fefaf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .schedule__card-schedule h1 {
+    color: black;
+    font-weight: 300;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 40vh;
+    width: 100vw;
+    background-color: #fefaf5;
+  }
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+  }
+  .footer__contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: 30%;
+    width: 25%;
+  }
+  .footer__hours-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: 30%;
+    width: 50%;
+  }
+  .footer__opening-hours-container {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+  }
+  .footer .footer__info-box {
+    width: 200px;
+  }
+  .footer__social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 25%;
+    height: 30%;
+  }
+  .footer__title-header {
+    color: #db7a4e;
+  }
+  .footer__img-container {
+    height: 90px;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
+  }
+  .footer__small-img {
+    padding-right: 20px;
+    height: 35px;
+  }
+}/*# sourceMappingURL=greece.css.map */

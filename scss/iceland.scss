@@ -1,0 +1,373 @@
+@use "./variables" as vars;
+@use "./mixins" as mixins;
+
+body {
+  font-family: vars.$primary-font;
+  color: vars.$blue-color;
+  margin: 0;
+  overflow-x: hidden;
+}
+/* Navigation Bar */
+@include mixins.media-query-max(vars.$mobile-max-width) {
+  .navigation-bar {
+    @include mixins.flex-center-column;
+    height: 200px;
+    width: 100vw;
+
+    &__list-container {
+      height: 100px;
+      width: 100%;
+
+      @include mixins.flex-center-column;
+    }
+
+    &__link--active {
+      border-bottom: solid vars.$orange-color;
+    }
+
+    &__logo {
+      font-size: 32px;
+      font-weight: 700;
+      padding: 0;
+    }
+
+    &__logo-container {
+      height: 100px;
+      width: 100%;
+
+      @include mixins.flex-center-column;
+    }
+    &__nav-links {
+      width: 100%;
+      @include mixins.flex-center-row;
+      list-style-type: none;
+      justify-content: space-around;
+      padding: 0;
+    }
+    li {
+      padding: 0;
+      @include mixins.flex-center-column;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$blue-color;
+    }
+  }
+
+  .schedule {
+    width: 100vw;
+    @include mixins.flex-center-column;
+    background-image: url(../Assets/Images/iceland.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__title-container {
+      width: 100%;
+      height: 20%;
+      @include mixins.flex-center-column;
+    }
+    &__title {
+      font-size: 50px;
+      color: vars.$white-color;
+    }
+
+    &__container {
+      width: 80%;
+      height: 100%;
+      @include mixins.flex-center-column;
+    }
+
+    &__cards {
+      width: 70%;
+      @include mixins.flex-center-column;
+      justify-content: space-around;
+    }
+    &__card {
+      height: 500px;
+      width: 320px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+      background-color: vars.$white-color;
+      margin-bottom: 20px;
+      padding-right: 10px;
+      @include mixins.flex-center-column;
+      justify-content: start;
+    }
+
+    &__card-name {
+      height: 40px;
+      width: 90%;
+      text-align: center;
+      border-bottom: solid black;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    &__card-schedule-container {
+      width: 90%;
+      height: 80%;
+      @include mixins.flex-center-column;
+      justify-content: space-around;
+    }
+    &__card-schedule {
+      height: 80%px;
+      width: 100%;
+      background-color: vars.$light-orange;
+      @include mixins.flex-center-column;
+
+      h1 {
+        color: black;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .footer {
+    @include mixins.flex-center-row;
+
+    width: 100vw;
+    background-color: vars.$light-orange;
+
+    &__container {
+      @include mixins.flex-center-column;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__contact-container {
+      @include mixins.flex-center-column;
+      height: 33%;
+      width: 100%;
+    }
+
+    &__hours-container {
+      @include mixins.flex-center-column;
+      height: 33%;
+      width: 100%;
+    }
+
+    &__opening-hours-container {
+      width: 100%;
+      @include mixins.flex-center-column;
+    }
+
+    .footer__info-box {
+      height: 80px;
+      width: 200px;
+      margin: 0;
+
+      @include mixins.flex-center-column;
+    }
+
+    &__social-container {
+      @include mixins.flex-center-column;
+      width: 100%;
+      height: 33%;
+    }
+
+    &__title-header {
+      color: vars.$orange-color;
+    }
+
+    &__img-container {
+      height: 90px;
+      width: 50%;
+
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+
+      img {
+        height: 40px;
+      }
+    }
+  }
+}
+
+@include mixins.media-query-min(vars.$tablet-min-width) {
+  .navigation-bar {
+    @include mixins.flex-center-row;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__logo-container {
+      @include mixins.flex-start;
+    }
+
+    &__logo {
+      font-weight: 700;
+
+      font-size: 30px;
+    }
+
+    &__list-container {
+      font-size: 20px;
+
+      @include mixins.flex-center-column;
+    }
+
+    &__nav-links {
+      @include mixins.flex-center-row;
+
+      list-style-type: none;
+
+      padding: 0;
+    }
+    li {
+      width: 100%;
+      height: 20%;
+      padding: 0;
+
+      @include mixins.flex-center-column;
+    }
+    a {
+      text-decoration: none;
+      color: vars.$blue-color;
+      padding-left: 0px;
+      margin-right: vars.$large-margin-desktop;
+    }
+
+    &__link--active {
+      border-bottom: solid vars.$orange-color;
+    }
+  }
+
+  .schedule {
+    width: 100vw;
+    @include mixins.flex-center-column;
+    background-image: url(../Assets/Images/iceland.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__title-container {
+      width: 100%;
+      @include mixins.flex-start;
+      align-items: end;
+    }
+    &__title {
+      font-size: 60px;
+      padding-left: 15%;
+      color: vars.$white-color;
+    }
+
+    &__container {
+      width: 60%;
+      @include mixins.flex-center-row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__cards {
+      @include mixins.flex-center-column;
+      justify-content: space-around;
+    }
+    &__card {
+      height: 500px;
+      width: 320px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+      background-color: vars.$white-color;
+      margin-bottom: 20px;
+      padding-right: 10px;
+      @include mixins.flex-center-column;
+      justify-content: start;
+    }
+
+    &__card-name {
+      height: 40px;
+      width: 90%;
+      text-align: center;
+      border-bottom: solid black;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    &__card-schedule-container {
+      width: 90%;
+      height: 80%;
+      @include mixins.flex-center-column;
+      justify-content: space-around;
+    }
+    &__card-schedule {
+      height: 80%px;
+      width: 100%;
+      background-color: vars.$light-orange;
+      @include mixins.flex-center-column;
+
+      h1 {
+        color: black;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .footer {
+    @include mixins.flex-center-row;
+    height: 40vh;
+    width: 100vw;
+    background-color: vars.$light-orange;
+
+    &__container {
+      @include mixins.flex-center-row;
+
+      width: 80%;
+    }
+
+    &__contact-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      height: 30%;
+      width: 25%;
+    }
+    &__hours-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      height: 30%;
+      width: 50%;
+    }
+
+    &__opening-hours-container {
+      flex-wrap: wrap;
+      width: 100%;
+      @include mixins.flex-start;
+    }
+
+    .footer__info-box {
+      width: 200px;
+    }
+
+    &__social-container {
+      @include mixins.flex-center-column;
+      align-items: start;
+      justify-content: start;
+      width: 25%;
+      height: 30%;
+    }
+
+    &__title-header {
+      color: vars.$orange-color;
+    }
+
+    &__img-container {
+      height: 90px;
+      width: 100%;
+      margin-top: 25px;
+      @include mixins.flex-center-row;
+      justify-content: start;
+    }
+    &__small-img {
+      padding-right: 20px;
+      height: 35px;
+    }
+  }
+}
